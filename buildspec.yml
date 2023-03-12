@@ -5,8 +5,6 @@ phases:
      # ubuntu: latest
   build:
     commands:
-      - sudo apt update -y
-      - sudo apt install nginx
       - ls -al
       - tar -cvf nginx.tar.gz ./*
       - ls -al
