@@ -1,0 +1,17 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      ubuntu: latest
+  build:
+    commands:
+      - sudo apt update -y
+      - sudo apt install nginx
+      - ls -al
+      - tar -cvf nginx.tar.gz ./*
+      - ls -al
+artifacts:
+  files:
+    - appspec.yml
+    - buildspec.yml
+    - nginx.tar.gz
