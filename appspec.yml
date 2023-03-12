@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/
+    overwrite: true
+file_exists_behavior: OVERWRITE
+hooks:
+  #BeforeInstall:
+  #  - location: deploy.sh
+  #    timeout: 500
+  AfterInstall:
+    - location: deploy.sh
+      timeout: 500
